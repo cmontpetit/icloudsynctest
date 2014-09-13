@@ -50,10 +50,24 @@ class ModelManager {
         // Insert code here to initialize your application
         Entity1.create(ctx, by: from)
         if !ctx.save(&anyError) {
-            println("Cannot save: \(anyError!.localizedDescription)")
+            println("Cannot save on create: \(anyError!.localizedDescription)")
             println("   userInfo: \(anyError!.userInfo)")
         }
     }
     
-    
+    func updateLastEntity(){
+        var anyError: NSError?
+        let req = NSFetchRequest(entityName: "Entity1")
+        req.sortDescriptors = [NSSortDescriptor(key: "createdAt", ascending:false)]
+        req.predicate = NSPredicate(format:"from = \(from)")
+        let all: NSArray! = ctx.executeFetchRequest(req, error:&anyError)
+        if (all.count > 0) {
+            var e = all[0] as Entity1
+            e.updatedCount += 1
+        }
+        if !ctx.save(&anyError) {
+            println("Cannot save on updateLastEntity: \(anyError!.localizedDescription)")
+            println("   userInfo: \(anyError!.userInfo)")
+        }
+    }
 }

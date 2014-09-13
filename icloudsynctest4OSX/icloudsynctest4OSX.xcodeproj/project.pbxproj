@@ -40,6 +40,7 @@
 		963F51EB19C2953E0094BC68 /* icloudsynctest4OSXTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = icloudsynctest4OSXTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		963F51F019C2953E0094BC68 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		963F51F119C2953E0094BC68 /* icloudsynctest4OSXTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = icloudsynctest4OSXTests.swift; sourceTree = "<group>"; };
+		96FF675F19C3D1D90020092F /* icloudsynctest4OSX.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = icloudsynctest4OSX.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +93,7 @@
 		963F51D819C2953E0094BC68 /* icloudsynctest4OSX */ = {
 			isa = PBXGroup;
 			children = (
+				96FF675F19C3D1D90020092F /* icloudsynctest4OSX.entitlements */,
 				9618B0C519C3CB0B00FA1EFF /* common */,
 				963F51DD19C2953E0094BC68 /* AppDelegate.swift */,
 				963F51E219C2953E0094BC68 /* Images.xcassets */,
@@ -177,6 +179,11 @@
 					963F51D519C2953E0094BC68 = {
 						CreatedOnToolsVersion = 6.1;
 						DevelopmentTeam = N4DH3D8HZT;
+						SystemCapabilities = {
+							com.apple.iCloud = {
+								enabled = 1;
+							};
+						};
 					};
 					963F51EA19C2953E0094BC68 = {
 						CreatedOnToolsVersion = 6.1;
@@ -346,6 +353,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = icloudsynctest4OSX/icloudsynctest4OSX.entitlements;
 				CODE_SIGN_IDENTITY = "Developer ID Application";
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
@@ -360,6 +368,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = icloudsynctest4OSX/icloudsynctest4OSX.entitlements;
 				CODE_SIGN_IDENTITY = "Developer ID Application";
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;

@@ -3,8 +3,9 @@
     <entity name="Entity1" representedClassName="Entity1" syncable="YES">
         <attribute name="createdAt" optional="YES" attributeType="Date" syncable="YES"/>
         <attribute name="createdBy" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="updatedCount" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Entity1" positionX="-63" positionY="-18" width="128" height="75"/>
+        <element name="Entity1" positionX="-63" positionY="-18" width="128" height="90"/>
     </elements>
 </model>
