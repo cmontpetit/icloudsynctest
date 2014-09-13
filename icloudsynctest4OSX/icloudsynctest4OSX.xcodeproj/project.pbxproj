@@ -7,9 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9618B0CA19C3CB0B00FA1EFF /* Entity1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9618B0C619C3CB0B00FA1EFF /* Entity1.swift */; };
+		9618B0CB19C3CB0B00FA1EFF /* icloudsynctest.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9618B0C719C3CB0B00FA1EFF /* icloudsynctest.xcdatamodeld */; };
+		9618B0CC19C3CB0B00FA1EFF /* ModelManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9618B0C919C3CB0B00FA1EFF /* ModelManager.swift */; };
 		963F51DC19C2953E0094BC68 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 963F51DB19C2953E0094BC68 /* main.swift */; };
 		963F51DE19C2953E0094BC68 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 963F51DD19C2953E0094BC68 /* AppDelegate.swift */; };
-		963F51E119C2953E0094BC68 /* icloudsynctest4OSX.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 963F51DF19C2953E0094BC68 /* icloudsynctest4OSX.xcdatamodeld */; };
 		963F51E319C2953E0094BC68 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 963F51E219C2953E0094BC68 /* Images.xcassets */; };
 		963F51E619C2953E0094BC68 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 963F51E419C2953E0094BC68 /* MainMenu.xib */; };
 		963F51F219C2953E0094BC68 /* icloudsynctest4OSXTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 963F51F119C2953E0094BC68 /* icloudsynctest4OSXTests.swift */; };
@@ -26,11 +28,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9618B0C619C3CB0B00FA1EFF /* Entity1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Entity1.swift; sourceTree = "<group>"; };
+		9618B0C819C3CB0B00FA1EFF /* icloudsynctest.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = icloudsynctest.xcdatamodel; sourceTree = "<group>"; };
+		9618B0C919C3CB0B00FA1EFF /* ModelManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModelManager.swift; sourceTree = "<group>"; };
 		963F51D619C2953E0094BC68 /* icloudsynctest4OSX.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = icloudsynctest4OSX.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		963F51DA19C2953E0094BC68 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		963F51DB19C2953E0094BC68 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		963F51DD19C2953E0094BC68 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		963F51E019C2953E0094BC68 /* icloudsynctest4OSX.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = icloudsynctest4OSX.xcdatamodel; sourceTree = "<group>"; };
 		963F51E219C2953E0094BC68 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		963F51E519C2953E0094BC68 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		963F51EB19C2953E0094BC68 /* icloudsynctest4OSXTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = icloudsynctest4OSXTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -56,6 +60,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9618B0C519C3CB0B00FA1EFF /* common */ = {
+			isa = PBXGroup;
+			children = (
+				9618B0C619C3CB0B00FA1EFF /* Entity1.swift */,
+				9618B0C719C3CB0B00FA1EFF /* icloudsynctest.xcdatamodeld */,
+				9618B0C919C3CB0B00FA1EFF /* ModelManager.swift */,
+			);
+			name = common;
+			path = ../../common;
+			sourceTree = "<group>";
+		};
 		963F51CD19C2953E0094BC68 = {
 			isa = PBXGroup;
 			children = (
@@ -77,10 +92,10 @@
 		963F51D819C2953E0094BC68 /* icloudsynctest4OSX */ = {
 			isa = PBXGroup;
 			children = (
+				9618B0C519C3CB0B00FA1EFF /* common */,
 				963F51DD19C2953E0094BC68 /* AppDelegate.swift */,
 				963F51E219C2953E0094BC68 /* Images.xcassets */,
 				963F51E419C2953E0094BC68 /* MainMenu.xib */,
-				963F51DF19C2953E0094BC68 /* icloudsynctest4OSX.xcdatamodeld */,
 				963F51D919C2953E0094BC68 /* Supporting Files */,
 			);
 			path = icloudsynctest4OSX;
@@ -212,8 +227,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				963F51E119C2953E0094BC68 /* icloudsynctest4OSX.xcdatamodeld in Sources */,
+				9618B0CB19C3CB0B00FA1EFF /* icloudsynctest.xcdatamodeld in Sources */,
 				963F51DE19C2953E0094BC68 /* AppDelegate.swift in Sources */,
+				9618B0CC19C3CB0B00FA1EFF /* ModelManager.swift in Sources */,
+				9618B0CA19C3CB0B00FA1EFF /* Entity1.swift in Sources */,
 				963F51DC19C2953E0094BC68 /* main.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -408,6 +425,7 @@
 				963F51F719C2953E0094BC68 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		963F51F819C2953E0094BC68 /* Build configuration list for PBXNativeTarget "icloudsynctest4OSXTests" */ = {
 			isa = XCConfigurationList;
@@ -416,17 +434,18 @@
 				963F51FA19C2953E0094BC68 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		963F51DF19C2953E0094BC68 /* icloudsynctest4OSX.xcdatamodeld */ = {
+		9618B0C719C3CB0B00FA1EFF /* icloudsynctest.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				963F51E019C2953E0094BC68 /* icloudsynctest4OSX.xcdatamodel */,
+				9618B0C819C3CB0B00FA1EFF /* icloudsynctest.xcdatamodel */,
 			);
-			currentVersion = 963F51E019C2953E0094BC68 /* icloudsynctest4OSX.xcdatamodel */;
-			path = icloudsynctest4OSX.xcdatamodeld;
+			currentVersion = 9618B0C819C3CB0B00FA1EFF /* icloudsynctest.xcdatamodel */;
+			path = icloudsynctest.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};

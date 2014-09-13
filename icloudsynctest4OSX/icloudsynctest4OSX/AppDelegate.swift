@@ -12,9 +12,20 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
     @IBOutlet weak var window: NSWindow!
 
+    @IBOutlet weak var entitiesLog: NSTextField!
 
+    var modelManager: ModelManager?
+
+    @IBAction func actionCreateEntity1(sender: AnyObject) {
+        modelManager!.createEntity1()
+    }
+    
+    @IBAction func actionShowEntities(sender: AnyObject) {
+        self.entitiesLog.stringValue = modelManager!.entitiesAsString()
+    }
+    
     func applicationDidFinishLaunching(aNotification: NSNotification?) {
-        // Insert code here to initialize your application
+        modelManager = ModelManager(ctx: self.managedObjectContext!, persistentStoreCoordinator: self.persistentStoreCoordinator!, from: "OSX")
     }
 
     func applicationWillTerminate(aNotification: NSNotification?) {
@@ -32,7 +43,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
     lazy var managedObjectModel: NSManagedObjectModel = {
         // The managed object model for the application. This property is not optional. It is a fatal error for the application not to be able to find and load its model.
-        let modelURL = NSBundle.mainBundle().URLForResource("icloudsynctest4OSX", withExtension: "momd")!
+        let modelURL = NSBundle.mainBundle().URLForResource("icloudsynctest", withExtension: "momd")!
         return NSManagedObjectModel(contentsOfURL: modelURL)
     }()
 
