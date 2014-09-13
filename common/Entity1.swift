@@ -6,9 +6,10 @@ import CoreData
     @NSManaged var updatedCount: Int16
     @NSManaged var createdBy: String
     @NSManaged var createdAt: NSDate
+    @NSManaged var sibblings: NSSet
     
     func description() -> String {
-        return "SharedEntity: Created by \(createdBy) at \(createdAt), updated \(updatedCount) times"
+        return "\(createdBy) : \(createdAt) -- \(updatedCount) updates -- \(sibblings.count) sibblings"
     }
         
     class func create(ctx:NSManagedObjectContext, by:String) -> Entity1 {

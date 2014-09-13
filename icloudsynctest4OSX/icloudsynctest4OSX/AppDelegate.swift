@@ -13,6 +13,9 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     @IBOutlet weak var window: NSWindow!
 
     var modelManager: ModelManager?
+    
+    let options = [NSMigratePersistentStoresAutomaticallyOption : 1, NSInferMappingModelAutomaticallyOption : 1, NSPersistentStoreUbiquitousContentNameKey : "icloudsynctest4"]
+    var storeURL: NSURL!
 
     @IBOutlet var entitiesLog: NSTextView!
     
@@ -28,6 +31,22 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         self.entitiesLog.string = modelManager!.entitiesAsString()
     }
     
+    @IBAction func actionDeleteOldest(sender: AnyObject) {
+        modelManager!.deleteOldestEntity()
+    }
+    
+    @IBAction func actionReset(sender: AnyObject) {
+        var error: NSError?
+        let ret = NSPersistentStoreCoordinator.removeUbiquitousContentAndPersistentStoreAtURL(self.storeURL, options:options, error: &error)
+        if (!ret) {
+            println("Resetting iCloud data failed: \(error?)")
+        }
+        else {
+            println("Resetting iCloud data succeeded")
+        }
+
+    }
+
     func applicationDidFinishLaunching(aNotification: NSNotification?) {
         modelManager = ModelManager(ctx: self.managedObjectContext!, persistentStoreCoordinator: self.persistentStoreCoordinator!, from: "OSX")
     }
@@ -74,9 +93,8 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         var coordinator: NSPersistentStoreCoordinator?
         if !shouldFail && (error == nil) {
             coordinator = NSPersistentStoreCoordinator(managedObjectModel: self.managedObjectModel)
-            let url = self.applicationDocumentsDirectory.URLByAppendingPathComponent("icloudsynctest4OSX.storedata")
-            let options = [NSMigratePersistentStoresAutomaticallyOption : 1, NSInferMappingModelAutomaticallyOption : 1, NSPersistentStoreUbiquitousContentNameKey : "icloudsynctest2"]            
-            if coordinator!.addPersistentStoreWithType(NSSQLiteStoreType, configuration: nil, URL: url, options: options, error: &error) == nil {
+            self.storeURL = self.applicationDocumentsDirectory.URLByAppendingPathComponent("icloudsynctest4OSX.storedata")
+            if coordinator!.addPersistentStoreWithType(NSSQLiteStoreType, configuration: nil, URL: self.storeURL, options: self.options, error: &error) == nil {
                 coordinator = nil
             }
         }

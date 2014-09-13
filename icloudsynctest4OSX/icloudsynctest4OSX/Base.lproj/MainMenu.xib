@@ -671,14 +671,14 @@
         <window title="icloudsynctest4OSX" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" animationBehavior="default" id="QvC-M9-y7g">
             <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
-            <rect key="contentRect" x="335" y="390" width="480" height="365"/>
+            <rect key="contentRect" x="335" y="390" width="789" height="358"/>
             <rect key="screenRect" x="0.0" y="0.0" width="1440" height="877"/>
             <view key="contentView" id="EiT-Mj-1SZ">
-                <rect key="frame" x="0.0" y="0.0" width="480" height="365"/>
+                <rect key="frame" x="0.0" y="0.0" width="789" height="358"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Szo-6j-iU4">
-                        <rect key="frame" x="14" y="317" width="136" height="32"/>
+                        <rect key="frame" x="14" y="310" width="136" height="32"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="124" id="9Zs-t3-oTG"/>
                         </constraints>
@@ -691,7 +691,7 @@
                         </connections>
                     </button>
                     <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="wwD-64-1rT">
-                        <rect key="frame" x="343" y="317" width="123" height="32"/>
+                        <rect key="frame" x="652" y="310" width="123" height="32"/>
                         <buttonCell key="cell" type="push" title="Show entities" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="CsT-7W-WN0">
                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                             <font key="font" metaFont="system"/>
@@ -701,7 +701,7 @@
                         </connections>
                     </button>
                     <scrollView horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vwm-73-T9n">
-                        <rect key="frame" x="20" y="20" width="440" height="284"/>
+                        <rect key="frame" x="20" y="20" width="749" height="277"/>
                         <clipView key="contentView" id="7lc-YL-Tqv">
                             <rect key="frame" x="1" y="1" width="223" height="133"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -710,11 +710,11 @@
                                     <rect key="frame" x="0.0" y="0.0" width="223" height="282"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                    <size key="minSize" width="438" height="282"/>
-                                    <size key="maxSize" width="463" height="10000000"/>
+                                    <size key="minSize" width="747" height="275"/>
+                                    <size key="maxSize" width="747" height="10000000"/>
                                     <color key="insertionPointColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
-                                    <size key="minSize" width="438" height="282"/>
-                                    <size key="maxSize" width="463" height="10000000"/>
+                                    <size key="minSize" width="747" height="275"/>
+                                    <size key="maxSize" width="747" height="10000000"/>
                                 </textView>
                             </subviews>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -729,12 +729,32 @@
                         </scroller>
                     </scrollView>
                     <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="nJS-df-eaS">
-                        <rect key="frame" x="150" y="317" width="143" height="32"/>
+                        <rect key="frame" x="150" y="310" width="143" height="32"/>
                         <buttonCell key="cell" type="push" title="Update last OSX" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="zqR-yX-O6Q">
                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                             <font key="font" metaFont="system"/>
                             <connections>
                                 <action selector="updateLastEntity1:" target="Voe-Tx-rLC" id="Mjn-eH-62Q"/>
+                            </connections>
+                        </buttonCell>
+                    </button>
+                    <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Keo-cN-bfi">
+                        <rect key="frame" x="293" y="310" width="71" height="32"/>
+                        <buttonCell key="cell" type="push" title="reset" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="NuQ-CU-YeK">
+                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                            <font key="font" metaFont="system"/>
+                        </buttonCell>
+                        <connections>
+                            <action selector="actionReset:" target="Voe-Tx-rLC" id="Jug-vj-2rg"/>
+                        </connections>
+                    </button>
+                    <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fms-Yq-QdN">
+                        <rect key="frame" x="364" y="310" width="120" height="32"/>
+                        <buttonCell key="cell" type="push" title="delete oldest" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="fSU-Ob-fNm">
+                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                            <font key="font" metaFont="system"/>
+                            <connections>
+                                <action selector="actionDeleteOldest:" target="Voe-Tx-rLC" id="g0K-Qb-tTd"/>
                             </connections>
                         </buttonCell>
                     </button>
@@ -752,6 +772,7 @@
                     <constraint firstItem="Szo-6j-iU4" firstAttribute="leading" secondItem="EiT-Mj-1SZ" secondAttribute="leading" constant="20" symbolic="YES" id="yMb-Ej-wv6"/>
                 </constraints>
             </view>
+            <point key="canvasLocation" x="397.5" y="242"/>
         </window>
     </objects>
 </document>
