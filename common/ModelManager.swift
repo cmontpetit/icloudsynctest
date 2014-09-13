@@ -35,8 +35,10 @@ class ModelManager {
     }
     
     func entitiesAsString() -> String {
+        ctx.reset()
         var anyError: NSError?
         let req = NSFetchRequest(entityName: "Entity1")
+        req.sortDescriptors = [NSSortDescriptor(key: "createdAt", ascending:false)]
         let all: NSArray! = ctx.executeFetchRequest(req, error:&anyError)
         var log = "Existing Entity1 count: \(all.count)"
         for e in all {
@@ -59,7 +61,7 @@ class ModelManager {
         var anyError: NSError?
         let req = NSFetchRequest(entityName: "Entity1")
         req.sortDescriptors = [NSSortDescriptor(key: "createdAt", ascending:false)]
-        req.predicate = NSPredicate(format:"from = \(from)")
+        req.predicate = NSPredicate(format:"createdBy == %@", from)
         let all: NSArray! = ctx.executeFetchRequest(req, error:&anyError)
         if (all.count > 0) {
             var e = all[0] as Entity1

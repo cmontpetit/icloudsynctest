@@ -12,16 +12,20 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
     @IBOutlet weak var window: NSWindow!
 
-    @IBOutlet weak var entitiesLog: NSTextField!
-
     var modelManager: ModelManager?
 
+    @IBOutlet var entitiesLog: NSTextView!
+    
+    @IBAction func updateLastEntity1(sender: AnyObject) {
+        modelManager!.updateLastEntity()
+    }
+    
     @IBAction func actionCreateEntity1(sender: AnyObject) {
         modelManager!.createEntity1()
     }
     
     @IBAction func actionShowEntities(sender: AnyObject) {
-        self.entitiesLog.stringValue = modelManager!.entitiesAsString()
+        self.entitiesLog.string = modelManager!.entitiesAsString()
     }
     
     func applicationDidFinishLaunching(aNotification: NSNotification?) {

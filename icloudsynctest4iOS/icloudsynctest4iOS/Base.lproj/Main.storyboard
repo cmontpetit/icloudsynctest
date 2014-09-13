@@ -38,18 +38,28 @@
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HHx-0b-DHj">
                                 <rect key="frame" x="16" y="58" width="568" height="522"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TNs-TF-iOv">
+                                <rect key="frame" x="120" y="20" width="109" height="30"/>
+                                <state key="normal" title="Update last iOS">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="actionUpdateLastEntity:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="GJU-v9-OOo"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="9LK-wb-bWr" firstAttribute="trailing" secondItem="kh9-bI-dsS" secondAttribute="trailingMargin" id="H7L-L2-dmi"/>
                             <constraint firstItem="HHx-0b-DHj" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="HGl-iA-MLD"/>
                             <constraint firstItem="HHx-0b-DHj" firstAttribute="trailing" secondItem="kh9-bI-dsS" secondAttribute="trailingMargin" id="JrO-Yy-fhO"/>
+                            <constraint firstItem="TNs-TF-iOv" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" id="MC8-3h-2NN"/>
                             <constraint firstItem="V6j-bD-ihc" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" id="PN5-sF-ptV"/>
                             <constraint firstItem="9LK-wb-bWr" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" id="Rho-dF-qca"/>
+                            <constraint firstItem="TNs-TF-iOv" firstAttribute="leading" secondItem="V6j-bD-ihc" secondAttribute="trailing" constant="8" id="hyC-7U-ufQ"/>
                             <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="HHx-0b-DHj" secondAttribute="bottom" constant="20" id="nxO-kV-ibf"/>
                             <constraint firstItem="HHx-0b-DHj" firstAttribute="top" secondItem="V6j-bD-ihc" secondAttribute="bottom" constant="8" id="p4f-NW-Xdf"/>
                             <constraint firstItem="V6j-bD-ihc" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="rEf-1r-bi6"/>

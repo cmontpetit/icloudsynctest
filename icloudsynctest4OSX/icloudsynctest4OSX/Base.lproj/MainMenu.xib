@@ -13,7 +13,8 @@
         <customObject id="-3" userLabel="Application" customClass="NSObject"/>
         <customObject id="Voe-Tx-rLC" customClass="AppDelegate" customModule="icloudsynctest4OSX" customModuleProvider="target">
             <connections>
-                <outlet property="entitiesLog" destination="cf5-f7-zwR" id="Ojc-fS-mCn"/>
+                <outlet property="entitiesLog" destination="xNl-WJ-KqB" id="5gi-BI-bzr"/>
+                <outlet property="entitiesLogText" destination="vwm-73-T9n" id="ijV-TS-hof"/>
                 <outlet property="window" destination="QvC-M9-y7g" id="gIp-Ho-8D9"/>
             </connections>
         </customObject>
@@ -676,8 +677,11 @@
                 <rect key="frame" x="0.0" y="0.0" width="480" height="365"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Szo-6j-iU4">
+                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Szo-6j-iU4">
                         <rect key="frame" x="14" y="317" width="136" height="32"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="124" id="9Zs-t3-oTG"/>
+                        </constraints>
                         <buttonCell key="cell" type="push" title="Create entity 1" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Fdd-AQ-7LD">
                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                             <font key="font" metaFont="system"/>
@@ -686,7 +690,7 @@
                             <action selector="actionCreateEntity1:" target="Voe-Tx-rLC" id="Tvz-jb-rjc"/>
                         </connections>
                     </button>
-                    <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wwD-64-1rT">
+                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="wwD-64-1rT">
                         <rect key="frame" x="343" y="317" width="123" height="32"/>
                         <buttonCell key="cell" type="push" title="Show entities" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="CsT-7W-WN0">
                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -696,15 +700,57 @@
                             <action selector="actionShowEntities:" target="Voe-Tx-rLC" id="R9s-bC-wro"/>
                         </connections>
                     </button>
-                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cf5-f7-zwR">
-                        <rect key="frame" x="18" y="25" width="444" height="291"/>
-                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="log" id="lgw-W3-4il">
+                    <scrollView horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vwm-73-T9n">
+                        <rect key="frame" x="20" y="20" width="440" height="284"/>
+                        <clipView key="contentView" id="7lc-YL-Tqv">
+                            <rect key="frame" x="1" y="1" width="223" height="133"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            <subviews>
+                                <textView importsGraphics="NO" findStyle="panel" continuousSpellChecking="YES" allowsUndo="YES" usesRuler="YES" usesFontPanel="YES" verticallyResizable="YES" allowsNonContiguousLayout="YES" quoteSubstitution="YES" dashSubstitution="YES" spellingCorrection="YES" smartInsertDelete="YES" id="xNl-WJ-KqB">
+                                    <rect key="frame" x="0.0" y="0.0" width="223" height="282"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <size key="minSize" width="438" height="282"/>
+                                    <size key="maxSize" width="463" height="10000000"/>
+                                    <color key="insertionPointColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                    <size key="minSize" width="438" height="282"/>
+                                    <size key="maxSize" width="463" height="10000000"/>
+                                </textView>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </clipView>
+                        <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" doubleValue="1" horizontal="YES" id="zkA-AA-hVZ">
+                            <rect key="frame" x="-100" y="-100" width="87" height="18"/>
+                            <autoresizingMask key="autoresizingMask"/>
+                        </scroller>
+                        <scroller key="verticalScroller" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="pMs-8W-dBU">
+                            <rect key="frame" x="224" y="1" width="15" height="133"/>
+                            <autoresizingMask key="autoresizingMask"/>
+                        </scroller>
+                    </scrollView>
+                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="nJS-df-eaS">
+                        <rect key="frame" x="150" y="317" width="143" height="32"/>
+                        <buttonCell key="cell" type="push" title="Update last OSX" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="zqR-yX-O6Q">
+                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                             <font key="font" metaFont="system"/>
-                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
-                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                        </textFieldCell>
-                    </textField>
+                            <connections>
+                                <action selector="updateLastEntity1:" target="Voe-Tx-rLC" id="Mjn-eH-62Q"/>
+                            </connections>
+                        </buttonCell>
+                    </button>
                 </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="vwm-73-T9n" secondAttribute="trailing" constant="20" id="Aln-1Z-3Ep"/>
+                    <constraint firstAttribute="bottom" secondItem="vwm-73-T9n" secondAttribute="bottom" constant="20" id="GsE-7m-7iQ"/>
+                    <constraint firstItem="nJS-df-eaS" firstAttribute="leading" secondItem="Szo-6j-iU4" secondAttribute="trailing" constant="12" id="PRh-nJ-9hm"/>
+                    <constraint firstItem="Szo-6j-iU4" firstAttribute="baseline" secondItem="wwD-64-1rT" secondAttribute="baseline" id="Ujo-Y2-Vi5"/>
+                    <constraint firstItem="nJS-df-eaS" firstAttribute="top" secondItem="EiT-Mj-1SZ" secondAttribute="top" constant="20" id="bcN-nG-8UD"/>
+                    <constraint firstItem="wwD-64-1rT" firstAttribute="top" secondItem="EiT-Mj-1SZ" secondAttribute="top" constant="20" id="rqu-aU-mmN"/>
+                    <constraint firstAttribute="trailing" secondItem="wwD-64-1rT" secondAttribute="trailing" constant="20" id="uWp-JM-RIC"/>
+                    <constraint firstItem="vwm-73-T9n" firstAttribute="top" secondItem="Szo-6j-iU4" secondAttribute="bottom" constant="20" id="w3x-uX-TUA"/>
+                    <constraint firstItem="vwm-73-T9n" firstAttribute="leading" secondItem="EiT-Mj-1SZ" secondAttribute="leading" constant="20" id="xFm-hl-pat"/>
+                    <constraint firstItem="Szo-6j-iU4" firstAttribute="leading" secondItem="EiT-Mj-1SZ" secondAttribute="leading" constant="20" symbolic="YES" id="yMb-Ej-wv6"/>
+                </constraints>
             </view>
         </window>
     </objects>

@@ -29,5 +29,8 @@ class ViewController: UIViewController {
     @IBAction func actionShowEntities(sender: AnyObject) {
         logText.text = (UIApplication.sharedApplication().delegate as AppDelegate).modelManager!.entitiesAsString()
     }
+    @IBAction func actionUpdateLastEntity(sender: AnyObject) {
+        (UIApplication.sharedApplication().delegate as AppDelegate).modelManager!.updateLastEntity()
+    }
 }
 
