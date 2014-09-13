@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:common/icloudsynctest.xcdatamodeld">
+   </FileRef>
+   <FileRef
       location = "group:icloudsynctest4iOS/icloudsynctest4iOS.xcodeproj">
    </FileRef>
    <FileRef

@@ -7,13 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9618B0C419C3C7F200FA1EFF /* icloudsynctest.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9618B0C219C3C7F200FA1EFF /* icloudsynctest.xcdatamodeld */; };
 		963F524419C295BF0094BC68 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 963F524319C295BF0094BC68 /* AppDelegate.swift */; };
-		963F524719C295BF0094BC68 /* icloudsynctest4iOS.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 963F524519C295BF0094BC68 /* icloudsynctest4iOS.xcdatamodeld */; };
 		963F524919C295BF0094BC68 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 963F524819C295BF0094BC68 /* ViewController.swift */; };
 		963F524C19C295BF0094BC68 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 963F524A19C295BF0094BC68 /* Main.storyboard */; };
 		963F524E19C295BF0094BC68 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 963F524D19C295BF0094BC68 /* Images.xcassets */; };
 		963F525119C295BF0094BC68 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 963F524F19C295BF0094BC68 /* LaunchScreen.xib */; };
 		963F525D19C295BF0094BC68 /* icloudsynctest4iOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 963F525C19C295BF0094BC68 /* icloudsynctest4iOSTests.swift */; };
+		96F3ECFD19C3C5F300894DA9 /* ModelManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96F3ECFA19C3C5F300894DA9 /* ModelManager.swift */; };
+		96F3ECFE19C3C5F300894DA9 /* Entity1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96F3ECFB19C3C5F300894DA9 /* Entity1.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,10 +29,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9618B0C319C3C7F200FA1EFF /* icloudsynctest.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = icloudsynctest.xcdatamodel; sourceTree = "<group>"; };
 		963F523E19C295BF0094BC68 /* icloudsynctest4iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = icloudsynctest4iOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		963F524219C295BF0094BC68 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		963F524319C295BF0094BC68 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		963F524619C295BF0094BC68 /* icloudsynctest4iOS.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = icloudsynctest4iOS.xcdatamodel; sourceTree = "<group>"; };
 		963F524819C295BF0094BC68 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		963F524B19C295BF0094BC68 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		963F524D19C295BF0094BC68 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
@@ -39,6 +41,8 @@
 		963F525B19C295BF0094BC68 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		963F525C19C295BF0094BC68 /* icloudsynctest4iOSTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = icloudsynctest4iOSTests.swift; sourceTree = "<group>"; };
 		963F526619C3B7910094BC68 /* icloudsynctest4iOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = icloudsynctest4iOS.entitlements; sourceTree = "<group>"; };
+		96F3ECFA19C3C5F300894DA9 /* ModelManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModelManager.swift; sourceTree = "<group>"; };
+		96F3ECFB19C3C5F300894DA9 /* Entity1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Entity1.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,13 +84,13 @@
 		963F524019C295BF0094BC68 /* icloudsynctest4iOS */ = {
 			isa = PBXGroup;
 			children = (
+				96F3ECF719C3C5F300894DA9 /* common */,
 				963F526619C3B7910094BC68 /* icloudsynctest4iOS.entitlements */,
 				963F524319C295BF0094BC68 /* AppDelegate.swift */,
 				963F524819C295BF0094BC68 /* ViewController.swift */,
 				963F524A19C295BF0094BC68 /* Main.storyboard */,
 				963F524D19C295BF0094BC68 /* Images.xcassets */,
 				963F524F19C295BF0094BC68 /* LaunchScreen.xib */,
-				963F524519C295BF0094BC68 /* icloudsynctest4iOS.xcdatamodeld */,
 				963F524119C295BF0094BC68 /* Supporting Files */,
 			);
 			path = icloudsynctest4iOS;
@@ -115,6 +119,17 @@
 				963F525B19C295BF0094BC68 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		96F3ECF719C3C5F300894DA9 /* common */ = {
+			isa = PBXGroup;
+			children = (
+				96F3ECFA19C3C5F300894DA9 /* ModelManager.swift */,
+				96F3ECFB19C3C5F300894DA9 /* Entity1.swift */,
+				9618B0C219C3C7F200FA1EFF /* icloudsynctest.xcdatamodeld */,
+			);
+			name = common;
+			path = ../../common;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -224,8 +239,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				963F524919C295BF0094BC68 /* ViewController.swift in Sources */,
+				96F3ECFE19C3C5F300894DA9 /* Entity1.swift in Sources */,
+				9618B0C419C3C7F200FA1EFF /* icloudsynctest.xcdatamodeld in Sources */,
 				963F524419C295BF0094BC68 /* AppDelegate.swift in Sources */,
-				963F524719C295BF0094BC68 /* icloudsynctest4iOS.xcdatamodeld in Sources */,
+				96F3ECFD19C3C5F300894DA9 /* ModelManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -425,6 +442,7 @@
 				963F526219C295BF0094BC68 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		963F526319C295BF0094BC68 /* Build configuration list for PBXNativeTarget "icloudsynctest4iOSTests" */ = {
 			isa = XCConfigurationList;
@@ -433,17 +451,18 @@
 				963F526519C295BF0094BC68 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		963F524519C295BF0094BC68 /* icloudsynctest4iOS.xcdatamodeld */ = {
+		9618B0C219C3C7F200FA1EFF /* icloudsynctest.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				963F524619C295BF0094BC68 /* icloudsynctest4iOS.xcdatamodel */,
+				9618B0C319C3C7F200FA1EFF /* icloudsynctest.xcdatamodel */,
 			);
-			currentVersion = 963F524619C295BF0094BC68 /* icloudsynctest4iOS.xcdatamodel */;
-			path = icloudsynctest4iOS.xcdatamodeld;
+			currentVersion = 9618B0C319C3C7F200FA1EFF /* icloudsynctest.xcdatamodel */;
+			path = icloudsynctest.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};
